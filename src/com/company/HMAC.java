@@ -57,14 +57,16 @@ class RockPaperScissors {
     }
 
     public void startGame() {
+        showMovesMenu();
         int userMove = makeUserMove();
         int computerMove = makeComputerMove();
-        showMovesMenu();
         System.out.println("Your move: " + moves.get(userMove));
         System.out.println("Computer move: " + moves.get(computerMove));
         printResult(userMove, computerMove);
         System.out.println("HMAC Key: " + secretKey);
     }
+
+
 
     private int makeUserMove() {
         System.out.println("Enter your move: ");
