@@ -58,8 +58,9 @@ class RockPaperScissors {
 
     public void startGame() {
         showMovesMenu();
-        int userMove = makeUserMove();
         int computerMove = makeComputerMove();
+        System.out.println("HMAC: " + getMoveHMAC(moves.get(makeComputerMove())));
+        int userMove = makeUserMove();
         System.out.println("Your move: " + moves.get(userMove));
         System.out.println("Computer move: " + moves.get(computerMove));
         printResult(userMove, computerMove);
@@ -82,7 +83,7 @@ class RockPaperScissors {
     private int makeComputerMove() {
         Random random = new Random();
         int move = random.nextInt(moves.size());
-        System.out.println("HMAC: " + getMoveHMAC(moves.get(move)));
+      //  System.out.println("HMAC: " + getMoveHMAC(moves.get(move)));
         return move;
     }
 
@@ -113,4 +114,3 @@ class RockPaperScissors {
         }
     }
 }
-
